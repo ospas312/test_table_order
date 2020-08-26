@@ -14,31 +14,17 @@ class App extends React.Component {
       };
   }
   onRowSelect = row => {
-    console.log(row);
     this.setState({row});
   }
   offRowSelect = () => {
     this.setState({row: null})
   }
   inputForm = input =>{
-    console.log(input)
     this.setState(({row}) =>{ 
        Object.assign(row, input)
     });
     this.offRowSelect();
   }
-  /*inputForm = input =>{
-    console.log(input)
-    this.setState((state) =>{ 
-      return { row : state.row = input}
-    });
-  }*/
-  /*inputForm = input =>{
-    console.log(input)
-    console.log( this.state.row)
-    this.state.row.price = input.price;
-    this.state.row.quantity = input.quantity;
-  }*/
   togglePopup() {
     this.setState({
       showPopup: !this.state.showPopup
@@ -50,7 +36,6 @@ class App extends React.Component {
       this.setState({
           arr
       })
-      console.log('this.state.arr', this.state.arr)
   }
   render(){
     return (

@@ -22,9 +22,23 @@ class App extends React.Component {
   }
   inputForm = input =>{
     console.log(input)
-    this.state.row.price = input.price;
-    
+    this.setState(({row}) =>{ 
+       Object.assign(row, input)
+    });
+    this.offRowSelect();
   }
+  /*inputForm = input =>{
+    console.log(input)
+    this.setState((state) =>{ 
+      return { row : state.row = input}
+    });
+  }*/
+  /*inputForm = input =>{
+    console.log(input)
+    console.log( this.state.row)
+    this.state.row.price = input.price;
+    this.state.row.quantity = input.quantity;
+  }*/
   togglePopup() {
     this.setState({
       showPopup: !this.state.showPopup

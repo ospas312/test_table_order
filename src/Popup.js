@@ -3,44 +3,45 @@ import './Popup.css';
 
 
 function Popup (props) {
-    //const {id, name, country } = props.row
-    const [price, setPrice] = useState('')
-    const valueInputForm = event => {
-        setPrice(event.target.value !== "" ? event.target.value : event.target.value=props.row.price)
+    const {id, name, country } = props.row;
+    
+    let [price, setPrice] = useState(props.row.price)
+    let valueInputForm = event => {
+        setPrice(+event.target.value)
     }
-    const [quantity, setQuantity] = useState('')
-    const valueInput = event => {
-        setQuantity(event.target.value !== "" ? event.target.value : event.target.value=props.row.quantity)
+    let [quantity, setQuantity] = useState(props.row.quantity)
+    let valueInput = event => {
+        setQuantity(+event.target.value)
     }
     
         return(
             <div className="popup">
                 <div className="popup__content">
                     <div className="close" onClick={props.closePopup}></div>
-                    <table className="table">
+                    <table className="popup__table">
                 <thead>
-                    <tr>
-                        <th>ID</th>
-                        <th>Name</th>
-                        <th>Country</th>
-                        <th>Price</th>
-                        <th>Quantity</th>
+                    <tr className="popup__table-tr">
+                        <th className="popup__table-th">ID</th>
+                        <th className="popup__table-th">Name</th>
+                        <th className="popup__table-th">Country</th>
+                        <th className="popup__table-th">Price</th>
+                        <th className="popup__table-th">Quantity</th>
                     </tr>
                 </thead>
                 <tbody>
                     {
-                        <tr key={props.row.id} className="row" >
-                            <td>{props.row.id}</td>
-                            <td>{props.row.name}</td>
-                            <td>{props.row.country}</td>
-                            <td><input type={Number} onChange={valueInputForm}  defaultValue={props.row.price}/></td>
-                            <td><input onChange={valueInput}  defaultValue={props.row.quantity}/></td>
+                        <tr key={props.row.id} className="popup__table-tr" >
+                            <td className="popup__table-td">{props.row.id}</td>
+                            <td className="popup__table-td">{props.row.name}</td>
+                            <td className="popup__table-td">{props.row.country}</td>
+                            <td className="popup__table-td"><input type="number" onChange={valueInputForm}  value={price}/></td>
+                            <td className="popup__table-td"><input type="number" onChange={valueInput}  value={quantity}/></td>
                          </tr>
                     }
                 </tbody>
             </table>
-                    <button onClick={() => props.onInput({price, quantity})}>ok</button>
-                    <button onClick={props.closePopup}>cancel</button>
+                    <button className="popup__button" onClick={() => props.onInput({id, name, country, price, quantity})}>ok</button>
+                    <button className="popup__button" onClick={props.closePopup}>cancel</button>
                 </div>
             </div>
         );

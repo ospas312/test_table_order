@@ -10,7 +10,7 @@ class Report extends React.Component {
        let arrMax =  Math.max.apply(null, arr.map(item => (item.price)));
        return Math.ceil(arrMax/100)*100;
     };
-    testOtchet(){
+    wishReport(){
         let content =[];
         let arr = this.props.arr;
         for (let i=100; i<=(this.maxRange(arr)); i=i+100){
@@ -38,7 +38,7 @@ class Report extends React.Component {
                     </tr>
                 </thead>
                 <tbody> 
-                        { this.testOtchet() } 
+                        { this.wishReport() } 
                 </tbody>
             </table>
             </div>

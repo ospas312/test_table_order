@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+.table{
+  margin: 30px auto;
+}
+.row:hover{
+  background-color: rgb(169, 173, 173);
+  cursor: pointer;
+}
+th {
+  padding: 5px 15px;
+}
+.button__delete{
+  width: 70px;
+  height: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: cadetblue;
+  color: white;
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+  margin: 2px;
+}
+.button__delete:hover{
+  opacity: 0.8;
+}

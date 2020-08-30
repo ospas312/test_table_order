@@ -1,0 +1,38 @@
+[
+    {
+        "id": 1, "name": "брус", "character": "50x50", "quantity": 6, "price": 175 
+    },
+    {
+        "id": 2, "name": "брус", "character": "75x75", "quantity": 35, "price": 225
+    },
+    {
+        "id": 3, "name": "брус", "character": "150x150", "quantity": 15, "price": 1575
+    },
+    {
+        "id": 4, "name": "доска", "character": "150x50", "quantity": 25, "price": 575
+    },
+    {
+        "id": 5, "name": "доска", "character": "100x40", "quantity": 43, "price": 475
+    },
+    {
+        "id": 6, "name": "доска", "character": "140x50", "quantity": 74, "price": 500
+    },
+    {
+        "id": 7, "name": "ОСБ", "character": "2500х1250", "quantity": 11, "price": 450 
+    },
+    {
+        "id": 8, "name": "ОСБ", "character": "2500х2500", "quantity": 33, "price": 888
+    },
+    {
+        "id": 9, "name": "саморез", "character": "50мм", "quantity": 50, "price": 0.5
+    },
+    {
+        "id": 10, "name": "саморез", "character": "60мм", "quantity": 25, "price": 0.55
+    },
+    {
+        "id": 11, "name": "саморез", "character": "70мм", "quantity": 100, "price": 0.75
+    },
+    {
+        "id": 12, "name": "саморез", "character": "80мм", "quantity": 30, "price": 1
+    }
+]
